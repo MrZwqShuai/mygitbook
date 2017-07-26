@@ -7,7 +7,7 @@
 
   打开我们的git命令或者bower工具切换到我们的根目录cd /ts-blog 然后输入：
 
-  $ git clone https://github.com/angular/angular-seed.git
+  $ git clone [https://github.com/angular/angular-seed.git](https://github.com/angular/angular-seed.git) 在你的ts-blog文件加下面会生成![](/assets/import.png)
 
 
 

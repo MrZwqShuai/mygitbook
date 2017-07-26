@@ -20,21 +20,9 @@
 
 ## 为什么要前后端分离
 
+前后端各司其职 专注领域
+
+Web2.0的热潮 , Ajax的兴起带来SPA时代 \(Single Page Application单页应用\) ，前后端可以通过Json（可选协议之一）来交流，独立性更强,前后端人员在商量好接口后就可以'分手了'，通过语义良好的Restful API连接前后端人员的交流，见名知意
 
 
-\`\`
-
-curl -O https://nodejs.org/dist/v6.9.1/node-v6.9.1.tar.gz
-
-tar -xzvf node-v6.9.1.tar.gz
-
-cd node-v6.9.1
-
-./configure
-
-make
-
-make install
-
-\`\`\`
 

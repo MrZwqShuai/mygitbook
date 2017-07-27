@@ -24,15 +24,18 @@
   * scrollDirective.ts
 
 * service/
+
   * commonService.ts
 
   * loginService.ts
+
   * routeChangeService.ts
   * viewService.ts
+
 * routes/
   * index.ts
   * route.ts
-* interfaces
+* interfaces/
   * public.ts
 
 

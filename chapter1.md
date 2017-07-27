@@ -17,6 +17,7 @@
   * loginController.ts
   * mainListController.ts
   * publisherController.ts
+  * ...
 
 * directive/
 
@@ -30,11 +31,15 @@
   * loginService.ts
 
   * routeChangeService.ts
+
   * viewService.ts
+  * ...
 
 * routes/
+
   * index.ts
   * route.ts
+
 * interfaces/
   * public.ts
 

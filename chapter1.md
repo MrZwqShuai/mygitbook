@@ -17,15 +17,20 @@
   * * loginController.ts
     * mainListController.ts
     * publisherController.ts
-
   * directive/
+
   * * fileModelDirective.ts
     * scrollDirective.ts
   * service/
+  * * commonService.ts
+    * loginService.ts
+    * routeChangeService.ts
+    * viewService.ts
   * routes/
+  * * index.ts
+    * route.ts
   * interfaces
-
-
+  * * public.ts
 
 
 

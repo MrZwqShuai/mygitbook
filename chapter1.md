@@ -12,27 +12,28 @@
 
 * 这里的app文件夹是你项目代码核心，这里我们不用seed自动生成的目录，自定义自己的目录，设置directive，controller，service，routes，interfaces作为文件夹存放对应的js文件，views存放对应的视图HTML文件，我们的目录看起来就像下面这个样子:
 
-* * controller/
+* controller/
 
-  * * loginController.ts
-    * mainListController.ts
-    * publisherController.ts
-  * directive/
+  * loginController.ts
+  * mainListController.ts
+  * publisherController.ts
 
-  * * fileModelDirective.ts
-    * scrollDirective.ts
-  * service/
-  * * commonService.ts
-    * loginService.ts
-    * routeChangeService.ts
-    * viewService.ts
-  * routes/
-  * * index.ts
-    * route.ts
+* directive/
 
-  interfaces
+  * fileModelDirective.ts
+  * scrollDirective.ts
 
-  * * public.ts
+* service/
+  * commonService.ts
+
+  * loginService.ts
+  * routeChangeService.ts
+  * viewService.ts
+* routes/
+  * index.ts
+  * route.ts
+* interfaces
+  * public.ts
 
 
 

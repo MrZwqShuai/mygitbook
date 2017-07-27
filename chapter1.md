@@ -33,6 +33,7 @@
   * routeChangeService.ts
 
   * viewService.ts
+
   * ...
 
 * routes/
@@ -41,7 +42,10 @@
   * route.ts
 
 * interfaces/
+
   * public.ts
+
+> Angular核心就是controller，directive，service/factory/provide
 
 
 

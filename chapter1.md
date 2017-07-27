@@ -29,7 +29,8 @@
   * routes/
   * * index.ts
     * route.ts
-  * interfaces
+
+  interfaces
   * * public.ts
 
 

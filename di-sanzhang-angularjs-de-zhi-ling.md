@@ -95,5 +95,3 @@ angular.module("MyApp", [])
 
 
 
-
-

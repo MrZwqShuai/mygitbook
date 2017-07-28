@@ -36,5 +36,7 @@ angular.module('myApp', [ //依赖模块]),directive('myDirective',function() {
 
 * 下面是一个简单的例子
 
-   代码[https://codepen.io/MrZwqShuai/pen/jLbBwm](https://codepen.io/MrZwqShuai/pen/jLbBwm)
+  代码: [https://codepen.io/MrZwqShuai/pen/jLbBwm](https://codepen.io/MrZwqShuai/pen/jLbBwm)
+
+
 

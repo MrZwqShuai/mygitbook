@@ -42,10 +42,22 @@ angular.module('myApp', [ //依赖模块]),directive('myDirective',function() {
 
 * * 1.继承父级作用域（一般是嵌套在外面的控制器：这里是myController），或者继承最外层的根作用域（$rootScope\)
 * * 2.创建一个新的子作用域（子作用域原型继承该组件使用位置所在的作用域）
-
 * * 3.创建一个独立的作用域（该作用域没有原型继承，也称隔离作用域，这里是复用组件最重要的设置）
 
-
+```
+angular.module("MyApp", [])
+    .controller("MyController", function ($scope) {
+    $scope.myName='周杰伦' ;
+    $scope.myAge = 18 ;
+}).directive('myDirective',function(){
+  return {
+    restrict:'AE',
+    scope:false,//默认是false
+    template:'<p>我是指令生成的<p>'+
+    "<h3>你的年龄{{myAge}}</h3><input type='text' ng-model='myAge'>"
+  }
+})
+```
 
 
 

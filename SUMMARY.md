@@ -5,4 +5,5 @@
 * [第二章 Angular入门之$scope](第二章 Angular入门之$scope.md)
 * [第三章 AngularJs中指令](第三章 AngularJs中指令.md)
 * [第四章 AngularJs中的服务，控制器之间的交互](第四章 AngularJs中的服务，控制器之间的交互.md)
+* [第三章 AngularJs的指令](di-sanzhang-angularjs-de-zhi-ling.md)
 

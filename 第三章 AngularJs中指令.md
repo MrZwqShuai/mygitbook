@@ -49,35 +49,25 @@ angular.module('myApp', [ //依赖模块]),directive('myDirective',function() {
 ```
 angular.module("MyApp", [])
     .controller("MyController", function ($scope) {
-    $scope.myName='周杰伦' ;
-    $scope.myAge = 18 ;
-}).directive('myDirective',function(){
-  return {
-    restrict:'AE',
-    scope:false,//默认是false
-    template:'
-<
-p
->
-我是指令生成的
-<
-p
->
-'+
-    "
-<
-h3
->
-你的年龄{{myAge}}
-<
-/h3
->
-<
-input type='text' ng-model='myAge'
->
-"
-  }
-})
+        $scope.myName = '周杰伦';
+        $scope.myAge = 18;
+    }).directive('myDirective', function () {
+        return {
+            restrict: 'AE',
+            scope: {
+                myAge: '=',
+                myName: '@myName',
+                changeMyName: '&changeName'
+            },//默认是false
+            template: '<p>我是指令生成的<p>' +
+            "<h3>姓名{{myName}}</h3><h3>你的年龄{{myAge}}</h3><input type='text' ng-model='myAge'><input type='text' ng-model='myName'><button  ng-click='changeName()'>改变你的姓名</button>",
+            link: function ($scope) {
+                $scope.changeName = function () {
+                    $scope.myName = '昆凌';
+                };
+            }
+        }
+    })
 ```
 
 上面代码中由于字段scope是默认的false值，所以该指令的作用域就是具体使用所在的作用域，所以可以看到当你在输入内容的时候，上面的内容会一起改变，如果你将这里的scope字段设置成true，再做同样的事看看有什么不一样的地方，你会发现你上面的输入框并没有一起改变，这是因为scope字段设置成true的时候此时的指令创建一个新的子作用域，又因为子作用域是根据原型继承来继承父作用域（会在scope作用域继承讲到），这里的myAge不是对象的引用，所以就会造成父级作用域的数据不会因为子作用域的改变而改变。

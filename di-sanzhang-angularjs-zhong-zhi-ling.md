@@ -73,10 +73,16 @@ angular.module("MyApp", [])
 
 * 虽然这里是独立的作用域但是可以通过scope的{...}传入特殊的前缀标识符如：@，=，&lt;，& 来进行数据绑定
 * 创建独立作用域之后，我们可以用这些标识符来引用指令元素的属性就像上面代码那样
-* ```
-  <myDirective my-directive my-age="myAge" my-name="{{myName}}" change-my-Name="changeName()"></myDirective>
-  ```
-* 前缀标识符接口的描述
+
+`<myDirective my-directive my-age="myAge" my-name="{{myName}}" change-my-Name="changeName()"></myDirective>`
+
+* 前缀标识符接口的描述:
+
+1. @ 单项绑定前缀标识符 
+
+* 将特定属性的值插入作用域，当模板属性值发生变化的时候，当前独立作用域的对应属性也相应变化，使用@标识符之后必须使用{{}}双花括号包裹父作用域属性值才能生效，html中属性的名字要用-将两个单词连接，就像这样`my-name="{{myName}}"`
+
+1. 3
 
 
 

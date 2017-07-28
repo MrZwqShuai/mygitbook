@@ -67,5 +67,13 @@ angular.module("MyApp", [])
 
 > 虽然独立作用域和父作用域不存在原型继承关系，但是还是可以通过$parent属性来访问父作用域，不推荐这么做，这样破坏了指令与周围环境的隔离效果
 
-  2.还是贴出我们的代码:
+2.还是贴出我们的代码:[https://codepen.io/MrZwqShuai/pen/MvaEjz](https://codepen.io/MrZwqShuai/pen/MvaEjz)
+
+* 虽然这里是独立的作用域但是可以通过scope的{...}传入特殊的前缀标识符如：@，=，&lt;，& 来进行数据绑定
+* 创建独立作用域之后，我们可以用这些标识符来引用指令元素的属性就像上面代码那样
+* ```
+  <myDirective my-directive my-age="myAge" my-name="{{myName}}" change-my-Name="changeName()"></myDirective>
+  ```
+
+
 

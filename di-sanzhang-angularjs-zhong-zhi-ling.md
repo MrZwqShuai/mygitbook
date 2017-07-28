@@ -38,5 +38,13 @@ angular.module('myApp', [ //依赖模块]),directive('myDirective',function() {
 
   代码: [https://codepen.io/MrZwqShuai/pen/jLbBwm](https://codepen.io/MrZwqShuai/pen/jLbBwm)
 
+* 上述代码中我们可以看到一个简单的指令（这里和指令的思想有点不同，指令是为了分离dom操作，这里为了举例就没有依照指令的思路了），我们写了一个控制器myController然后紧接着在后面注册了一个指令myDirective，这里也可以也在module的后面，每当一个指令创建的时候都会生成一个作用域是可以选择的：
+
+* * 1.继承父级作用域（一般是嵌套在外面的控制器：这里是myController），或者继承最外层的根作用域（$rootScope\)
+
+* * 2.创建一个新的子作用域（子作用域原型继承该组件使用位置所在的作用域）
+
+  * 3.创建一个独立的作用域（该作用域没有原型继承，也称隔离作用域，这里是复用组件最重要的设置）
+
 
 

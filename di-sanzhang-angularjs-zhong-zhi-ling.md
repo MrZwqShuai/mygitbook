@@ -34,5 +34,9 @@ angular.module('myApp', [ //依赖模块]),directive('myDirective',function() {
 
 > 大多数的指令只需要其中的一部分字段
 
+* 下面是一个简单的例子
+
+代码[https://codepen.io/MrZwqShuai/pen/jLbBwm](https://codepen.io/MrZwqShuai/pen/jLbBwm)
+
 
 

@@ -36,7 +36,7 @@ angular.module('myApp', [ //依赖模块]),directive('myDirective',function() {
 
 * 下面是一个简单的例子
 
-  代码: [https://codepen.io/MrZwqShuai/pen/jLbBwm](https://codepen.io/MrZwqShuai/pen/jLbBwm)
+  代码: [https://codepen.io/MrZwqShuai/pen/MvaEjz](https://codepen.io/MrZwqShuai/pen/MvaEjz)
 
 * 上述代码中我们可以看到一个简单的指令（这里和指令的思想有点不同，指令是为了分离dom操作，这里为了举例就没有依照指令的思路了），我们写了一个控制器myController然后紧接着在后面注册了一个指令myDirective，这里也可以也在module的后面，每当一个指令创建的时候都会生成一个作用域是可以选择的：
 
@@ -67,5 +67,5 @@ angular.module("MyApp", [])
 
 > 虽然独立作用域和父作用域不存在原型继承关系，但是还是可以通过$parent属性来访问父作用域，不推荐这么做，这样破坏了指令与周围环境的隔离效果
 
-
+  2.还是贴出我们的代码:
 

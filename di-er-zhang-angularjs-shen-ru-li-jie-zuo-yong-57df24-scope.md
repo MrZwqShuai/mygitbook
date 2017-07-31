@@ -33,5 +33,7 @@ h1标签中会显示$scope.name的值，yourname。
 
 * 出现上面的原因并不是AngularJs做的事情，这是JavaScript的原型继承起作用了，我们之前说过AngularJs作用域遵循JavaScript原型继承，接下来我们有必要深入一下JavaScript的原型继承。
 
+##### Javascript原型继承
+
 
 

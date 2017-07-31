@@ -12,5 +12,6 @@ angular.module('app',[]).controller('myController',function($scope) { $scope.nam
 
 > Angular2+中剔除了控制器controller还有$scope，完全组件化
 
+* 
 
 

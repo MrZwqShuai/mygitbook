@@ -72,5 +72,11 @@ childScope.anObject.property1 === 'parent prop1'
 childScope.aFunction() === 'parent output'
 ```
 
+如果我们做如下操作:
 
+```
+childScope.aString = 'child string'
+```
+
+原型链并没有被访问, 一个新的astring会被加入到 childScope 的属性中去, 新的属性会隐藏 parentScope 中的同名属性.
 

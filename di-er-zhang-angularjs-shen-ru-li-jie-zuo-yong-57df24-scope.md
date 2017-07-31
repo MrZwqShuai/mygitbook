@@ -37,5 +37,29 @@ h1标签中会显示$scope.name的值，yourname。
 
 这里的ParentScope和ChildScope就相当于父子控制器，我只拿出其中可以解释父子作用域继承出现差异的原因部分，原文链接在这里[https://segmentfault.com/a/1190000004358393](https://segmentfault.com/a/1190000004358393)，讲的很详细了。
 
+```
+function ParentScope(){
+    this.aString = "parent string";
+    this.aNumber = 100;
+    this.anArray = [10,20,30];
+    this.anObject = {
+    'property1': 'parent prop1',
+    'property2': 'parent prop2' 
+    };
+    this.aFunction = function(){ 
+      return 'parent output'; 
+    }
+}
+
+function ChildScope(){    
+}
+
+ChildScope.prototype = new ParentScope();
+
+var childScope = new ChildScope();
+```
+
+
+
 
 

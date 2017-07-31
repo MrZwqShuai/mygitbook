@@ -31,7 +31,7 @@ h1标签中会显示$scope.name的值，yourname。
 
 > ParentController控制器中的原始类型并不会随着ChildrenController控制器（子作用域）的改变而改变，如果我们把$scope.myName ="小头爸爸" ;换成注释的代码，就会像你期望的那样工作了，所以我们推荐在你的模型中始终使用' . '，就是将变量绑定为对象的属性，而不是直接绑定作用域的属性。
 
-* 出现上面的原因并不是AngularJs做的事情，这是JavaScript的原型继承起作用了，我们之前说过AngularJs作用域遵循JavaScript原型继承
+* 出现上面的原因并不是AngularJs做的事情，这是JavaScript的原型继承起作用了，我们之前说过AngularJs作用域遵循JavaScript原型继承，接下来我们有必要深入一下JavaScript的原型继承。
 
 
 

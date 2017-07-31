@@ -80,3 +80,41 @@ childScope.aString = 'child string'
 
 原型链并没有被访问, 一个新的astring会被加入到 childScope 的属性中去, 新的属性会隐藏 parentScope 中的同名属性.
 
+![](/assets/3584488447-56a4cab6b7f25_articlex.png)
+
+假设我们做出如下操作:
+
+```
+childScope.anArray[1] = 22
+childScope.anObject.property1 = 'child prop1'
+```
+
+原型链被访问了. 因为 anArray, anObject 没有在 childScope 中找到. 新的赋值操作均在 parentScope 上进行. childScope 上没有添加任何新的属性.
+
+![](/assets/2529754630-56a4cacdaf2ea_articlex.png)
+
+如果我们做出如下操作
+
+```
+childScope.anArray = [100, 555]
+childScope.anObject = { name: 'Mark', country: 'USA' }
+```
+
+![](/assets/1674980122-56a4cadf44380_articlex.png)
+
+
+
+原型链没有被访问, childScope 会获得两个新的属性, 并且会隐藏 parentScope 上的同名属性.
+
+仔细体会上面的三次操作. 第一第三次均是对某个属性进行赋值, 原型链并不会被访问, 由于属性并不存在, 所以新的属性将会被添加. 而第二次其实是先访问, childScope.anArray, childScope.anObject, 再对其访问的对象的某个属性进行复制.
+
+##### 总结：
+
+* 如果我们读取 childScope.propertyX, 而 childScope 拥有 propertyX, 那么原型链不会被访问
+
+* 如果我们读取 childScope.propertyX, 而 childScope 并没有 propertyX, 那么原型链会被访问.
+
+* 如果对 childScope.propertyX 进行赋值, 那么原型链并不会被访问.
+
+
+

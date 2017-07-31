@@ -102,8 +102,6 @@ childScope.anObject = { name: 'Mark', country: 'USA' }
 
 ![](/assets/1674980122-56a4cadf44380_articlex.png)
 
-
-
 原型链没有被访问, childScope 会获得两个新的属性, 并且会隐藏 parentScope 上的同名属性.
 
 仔细体会上面的三次操作. 第一第三次均是对某个属性进行赋值, 原型链并不会被访问, 由于属性并不存在, 所以新的属性将会被添加. 而第二次其实是先访问, childScope.anArray, childScope.anObject, 再对其访问的对象的某个属性进行复制.

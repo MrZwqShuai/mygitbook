@@ -27,7 +27,7 @@ h1标签中会显示$scope.name的值，yourname。
 
 * 在AngularJs中，子作用域一般会继承其父作用域（当指令使用scope:{...}来定义的时候是个例外），比如你在子作用域中使用了双向数据绑定（类似ng-model），你的父作用域上原始类型（例如：number，string，boolean）和子作用域同名的属性并不会像你期望的那样工作，而是子作用域得到了它自己的属性，从而覆盖了父作用域上面的同名属性就像下面:
 
-* [https://codepen.io/MrZwqShuai/pen/qXZWPe\]\(https://codepen.io/MrZwqShuai/pen/qXZWPe\)](https://codepen.io/MrZwqShuai/pen/qXZWPe)
+       例子[https://codepen.io/MrZwqShuai/pen/qXZWPe\]\(https://codepen.io/MrZwqShuai/pen/qXZWPe\)](https://codepen.io/MrZwqShuai/pen/qXZWPe)
 
 &gt;
 

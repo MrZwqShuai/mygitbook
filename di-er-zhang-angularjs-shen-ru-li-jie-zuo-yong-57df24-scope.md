@@ -59,7 +59,18 @@ ChildScope.prototype = new ParentScope();
 var childScope = new ChildScope();
 ```
 
+ChildScope 原型继承自 ParentScope
 
+![](/assets/2810593304-56a4ca9accb89_articlex.png)
+
+如果我们要在 childScope 上查询一个定义在 parentScope 的属性, JavaScript 会先在 childScope 上查找, 如果没有查到, 那么会顺着原型链去查找. 所以以下判别式均为 true
+
+```
+childScope.aString === 'parent string'
+childScope.anArray[1] === 20
+childScope.anObject.property1 === 'parent prop1'
+childScope.aFunction() === 'parent output'
+```
 
 
 

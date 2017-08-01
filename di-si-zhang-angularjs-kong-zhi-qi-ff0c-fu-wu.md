@@ -39,5 +39,23 @@ angular.module('MyApp', [])
 
 * 常用三种创建服务的方法
 
+* factory\(\)
+
+```
+factory()方法是创建和配置服务最快捷方式。factory()函数接受两个参数：name（字符串） Fn（函数） 这个函数会在AngularJs
+创建服务实例时被调用。
+```
+
+```
+angular.module('MyApp', [])
+    .factory('myService', ['$http', function($http) {
+        return {
+            getData: function(url) {
+                $http.get(url).then(); //.....
+            }
+        }
+    }]);
+```
+
 
 

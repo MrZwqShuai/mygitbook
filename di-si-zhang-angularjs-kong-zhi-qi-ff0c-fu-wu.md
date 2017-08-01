@@ -123,3 +123,13 @@ myApp.config(function($provide) {
 
 这里即使我们发现不注入这个provider，但是它也是会进行实例化的。
 
+#### 控制器和服务之间的交互
+
+* 一般我们控制器总是通过service获取数据，而在conteoller中出现的逻辑都是和view相关的逻辑，比如loading，控制显示隐藏等等
+
+* 最佳实现，直接建一个service，不要用什么事件，controller积累多的话很难维护，\***直接在service中提供getter和setter存取的方法**
+
+* 每个controller依赖service
+
+
+

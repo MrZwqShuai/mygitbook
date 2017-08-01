@@ -37,13 +37,13 @@ angular.module('MyApp', [])
 >
 > 一共有5种方法来创建服务：1.factory\(\) 2.service\(\) 3.constant\(\) 4.value\(\) 5.provider\(\)
 
-* 常用三种创建服务的方法
+常用三种创建服务的方法
 
-* factory\(\)
+##### 1.factory\(\)
 
 ```
 factory()方法是创建和配置服务最快捷方式。factory()函数接受两个参数：name（字符串） Fn（函数） 这个函数会在AngularJs
-创建服务实例时被调用。
+创建服务实例时被调用。Fn这个函数是可以返回简单类型，函数，乃至对象等任意类型的数据
 ```
 
 ```
@@ -51,9 +51,25 @@ angular.module('MyApp', [])
     .factory('myService', ['$http', function($http) {
         return {
             getData: function(url) {
-                $http.get(url).then();
+                return $http.get(url).then();
                  //.....
             }
+        }
+    }]);
+```
+
+##### 2.service\(\)
+
+> 使用service\(\)可以注册一个支持构造函数的服务，它允许我们为服务对象注册一个构造函数。
+
+> service\(\)方法和factory\(\)方法区别不大，接受两个参数:name\(字符串，要注册的服务名称\)、constructor\(构造函数，我们调用它来实例化服务对象\)。我们用service重写上面的myService
+
+```
+angular.module('MyApp', [])
+    .service('myService', ['$http', function($http) {
+            this.getData = function(url) {
+                return $http.get(url).then();
+                 //.....
         }
     }]);
 ```

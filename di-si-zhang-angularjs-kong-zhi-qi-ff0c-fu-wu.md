@@ -6,7 +6,7 @@
 angular.module('app',[]).controller('myController',function($scope) { $scope.name = 'hello world' })
 ```
 
-* 控制器应该尽量精简，复杂业务逻辑交给服务，通过依赖注入与服务交互，复杂的DOM操作交给指令去操作
+* 控制器应该尽可能短小精悍，在控制器中进行DOM操作和数据操作则是一个不好的实践，复杂业务逻辑交给服务，通过依赖注入与服务交互，复杂的DOM操作交给指令去操作
 
 * 这里的控制器相当于mvvm中的viewmodel，作为视图与数据的桥梁
 

@@ -61,7 +61,7 @@ angular.module('MyApp', [])
 ##### 2.service\(\)
 
 > 使用service\(\)可以注册一个支持构造函数的服务，它允许我们为服务对象注册一个构造函数。
-
+>
 > service\(\)方法和factory\(\)方法区别不大，接受两个参数:name\(字符串，要注册的服务名称\)、constructor\(构造函数，我们调用它来实例化服务对象\)。我们用service重写上面的myService
 
 ```
@@ -72,6 +72,34 @@ angular.module('MyApp', [])
                  //.....
         }
     }]);
+```
+
+##### 3.provider\(\)
+
+所有服务工厂都是由$provide服务创建的，$provide服务在运行时初始化这些提供者。
+
+提供者是一个具有$get\(\)方法的对象，$inject通过挑用$get方法创建服务实例。所有创建服务的方法都构建在provider方法智商。provider\(\)方法负责在$providerCache中注册服务。
+
+```
+angular.module('myApp', [])
+    .provider('myService', {
+        $get: function() {
+            return {
+                'name': 'zwq'
+            }
+        }
+    });
+```
+
+factory版本
+
+```
+angular.module('myApp', [])
+    .factory('myService',function() {
+       return {
+          'name' : 'zwq'
+       }
+    });
 ```
 
 

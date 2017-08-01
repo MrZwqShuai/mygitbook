@@ -6,7 +6,7 @@
 angular.module('app',[]).controller('myController',function($scope) { $scope.name = 'hello world' })
 ```
 
-* 控制器应该尽可能短小精悍，在控制器中进行DOM操作和数据操作则是一个不好的实践，通过项目中的实践，我们应用一般会将复杂的逻辑放到指令和服务中心。轻量且更易维护的控制器看起来像这样:
+* \*控制器应该尽可能短小精悍，在控制器中进行DOM操作和数据操作则是一个不好的实践，通过项目中的实践，我们应用一般会将复杂的逻辑放到指令和服务中心。轻量且更易维护的控制器看起来像这样:
 
 ```
 angular.module('MyApp', [])
@@ -21,6 +21,7 @@ angular.module('MyApp', [])
 
 > Angular2+中剔除了控制器controller还有$scope，完全组件化
 
-* 
+
+
 
 

@@ -78,7 +78,7 @@ angular.module('MyApp', [])
 
 所有服务工厂都是由$provide服务创建的，$provide服务在运行时初始化这些提供者。
 
-提供者是一个具有$get\(\)方法的对象，$inject通过挑用$get方法创建服务实例。所有创建服务的方法都构建在provider方法智商。provider\(\)方法负责在$providerCache中注册服务。
+\***提供者是一个具有$get\(\)方法的对象**\*，$inject通过挑用$get方法创建服务实例。所有创建服务的方法都构建在provider方法智商。provider\(\)方法负责在$providerCache中注册服务。
 
 ```
 angular.module('myApp', [])
@@ -107,7 +107,19 @@ angular.module('myApp', [])
 * 当我们需要用AngularJs的.config\(\)函数来对.provider\(\)方法返回的服务进行额外的扩展配置。同其他创建服务的方法不同，config\(\)方法可以被注入特殊的参数。
 
 * 当我们希望在应用开始前就对服务进行配置的时候而不是service/factory是第一次注入时才会初始化时就需要使用到provider\(\)。
-* 比如
 
+```
+var myApp = angular.module('myApp', []);
+myApp.config(function($provide) {
+    $provide.provider('greeting', function() {
+        this.$get = function() {
+            return function(name) {
+                alert('hello', +name);
+            }
+        }
+    })
+})
+```
 
+这里即使我们发现不注入这个provider，但是它也是会进行实例化的。
 

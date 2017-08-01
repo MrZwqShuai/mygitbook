@@ -37,5 +37,7 @@ angular.module('MyApp', [])
 >
 > 一共有5种方法来创建服务：1.factory\(\) 2.service\(\) 3.constant\(\) 4.value\(\) 5.provider\(\)
 
-常用三种创建服务的方法
+* 常用三种创建服务的方法
+
+
 

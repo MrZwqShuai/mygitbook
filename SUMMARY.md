@@ -7,4 +7,5 @@
 * [第四章 AngularJs控制器，服务](di-si-zhang-angularjs-kong-zhi-qi-ff0c-fu-wu.md)
 * [第五章 AngularJs的脏检查手动调用$apply](di-wu-zhang-angularjs-de-zang-jian-cha-shou-dong-diao-752824-apply.md)
 * [第六章 基于NodeJs的Web开发框架](di-liu-zhang-nodejs.md)
+* [第七章 AngularJs结合Express搭建项目结构](di-qi-zhang-angularjsjie-he-express-da-jian-xiang-mu-jie-gou.md)
 

@@ -45,7 +45,7 @@
 
   * public.ts
 
-> Angular核心就是controller，directive，service/factory/provide
+> Angular核心就是作用域（$scope），controller，directive，service/factory/provide
 
 
 

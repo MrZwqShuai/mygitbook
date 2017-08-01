@@ -102,5 +102,12 @@ angular.module('myApp', [])
     });
 ```
 
+那什么时候使用provider\(\)方法
+
+* 当我们需要用AngularJs的.config\(\)函数来对.provider\(\)方法返回的服务进行额外的扩展配置。同其他创建服务的方法不同，config\(\)方法可以被注入特殊的参数。
+
+* 当我们希望在应用开始前就对服务进行配置的时候而不是service/factory是第一次注入时才会初始化时就需要使用到provider\(\)。
+* 比如
+
 
 

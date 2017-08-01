@@ -31,6 +31,8 @@ angular.module('MyApp', [])
 
 4. 上面在控制器中就用到了MyService这个单例服务，通过AngularJs依赖注入的方式提供给控制器，这样控制器就可以使用MyService的所有属性，方法。
 
+
+
 * 如何
 
 > 在AngularJs应用中，factory\(\)方法是用来注册服务的最常规方式。

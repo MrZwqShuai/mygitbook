@@ -129,7 +129,7 @@ myApp.config(function($provide) {
 
 * 最佳实现，直接建一个service，不要用什么事件，controller积累多的话很难维护，\***直接在service中提供getter和setter存取的方法**
 
-* 每个controller依赖service
+* 每个controller依赖service，统一的service.setter\(...\)在改完数据后可以$emit\('upDated'\)，每个controller里$on\('upDated',function\(\) { $scope.data = service.getData\(\) }\)
 
 
 

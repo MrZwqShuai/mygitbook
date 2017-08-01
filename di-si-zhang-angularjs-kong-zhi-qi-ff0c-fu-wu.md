@@ -51,7 +51,8 @@ angular.module('MyApp', [])
     .factory('myService', ['$http', function($http) {
         return {
             getData: function(url) {
-                $http.get(url).then(); //.....
+                $http.get(url).then();
+                 //.....
             }
         }
     }]);

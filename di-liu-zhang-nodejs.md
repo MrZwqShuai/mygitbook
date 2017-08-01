@@ -42,13 +42,52 @@ $ npm install express-generator -g
        run the app:
          $ DEBUG=micro-agency-demo:* npm start
 
-
 然后安装所有依赖包：
 
 ```
 $ cd Micro-agency-Demo
 $ npm install
 ```
+
+启动这个应用（MacOS 或 Linux 平台）：
+
+```
+$ DEBUG=Micro-agency-Demo npm start
+```
+
+Windows 平台使用如下命令：
+
+```
+> set DEBUG=Micro-agency-Demo & npm start
+```
+
+然后在浏览器中打开 [http://localhost:3000/](http://localhost:3000/)网址就可以看到这个应用了。
+
+通过 Express 应用生成器创建的应用一般都有如下目录结构：
+
+```
+.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── index.js
+│   └── users.js
+└── views
+    ├── error.jade
+    ├── index.jade
+    └── layout.jade
+
+7 directories, 9 files
+```
+
+> 通过 Express 应用生长期创建应用只是众多方法中的一种。你可以不使用它，也可以修改它让它符合你的需求，都是开源的嘛！
 
 
 
